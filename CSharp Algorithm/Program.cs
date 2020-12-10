@@ -6,8 +6,9 @@ namespace CSharp_Algorithm
     {
         static void Main(string[] args)
         {
-            Test1BasedArrays();
-            ArraysDemo();
+            // Test1BasedArrays();
+            // ArraysDemo();
+            ListDemo.Run();
             Console.Read();
         }
 
