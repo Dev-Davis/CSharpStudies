@@ -26,6 +26,13 @@ namespace CSharp_Algorithm
                 LogCountAndCapacity(list);
             }
 
+            // TrimExcess only works if 90% or more of the capacity is being used
+            list.TrimExcess();
+            LogCountAndCapacity(list);
+
+            list.Add(1);
+            LogCountAndCapacity(list);
+
             Console.Read();
         }
        
