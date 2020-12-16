@@ -6,6 +6,12 @@ namespace CSharp_Algorithm
 {
     class ListDemo
     {
+        public class Customer
+        {
+            public string Name { get; set; }
+            public DateTime BirthDate { get; set; }
+        }
+
         public static void Run()
         {
             // list of integers
@@ -35,6 +41,33 @@ namespace CSharp_Algorithm
 
             Console.Read();
         }
+
+        public static void ApiMembers()
+        {
+            // Other API members
+            var list = new List<int>() { 1, 0, 5, 3, 4 };
+            // Sort method without passing anything in works well for integers
+            list.Sort();
+
+            // 
+            var customerList = new List<Customer>
+            {
+                new Customer { BirthDate = new DateTime(1981, 08, 24), Name = "Marquita" },
+                new Customer { BirthDate = new DateTime(1987, 06, 27), Name = "Teara" },
+                new Customer { BirthDate = new DateTime(1988, 07, 27), Name = "Sean" }
+            };
+
+            // lamda expression
+            customerList.Sort((left, right) =>
+            {
+                if(left.BirthDate > right.BirthDate)
+                    return 1;
+                if (right.BirthDate > left.BirthDate)
+                    return -1;
+                    return 0;
+            });
+        }
+        
        
 
         private static void LogCountAndCapacity(List<int> list)
