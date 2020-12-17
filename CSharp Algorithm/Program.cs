@@ -8,8 +8,30 @@ namespace CSharp_Algorithm
         {
             // Test1BasedArrays();
             // ArraysDemo();
-            ListDemo.Run();
+            // ListDemo.Run();
+            
+
+            // Node chain
+            Node first = new Node() { Value = 5 };
+            Node second = new Node { Value = 1 };
+
+            first.Next = second;
+
+            Node third = new Node() { Value = 3 };
+            second.Next = third;
+
+            PrintOutLinkedList(first);
             Console.Read();
+        }
+
+        private static void PrintOutLinkedList(Node node)
+        {
+            while(node != null)
+            {
+                Console.Write(node.Value);
+                // reset the value by assigning it to it's own next property
+                node = node.Next;
+            }
         }
 
         private static void ArraysDemo()

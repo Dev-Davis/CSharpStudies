@@ -49,7 +49,19 @@ namespace CSharp_Algorithm
             // Sort method without passing anything in works well for integers
             list.Sort();
 
-            // 
+            // research these moethods
+  
+            int indexBinSearch = list.BinarySearch(3);
+
+            list.Reverse();
+
+            IReadOnlyCollection<int> readOnlyList = list.AsReadOnly();
+
+            // To pull the array out of the list
+            int[] array = list.ToArray();
+
+
+
             var customerList = new List<Customer>
             {
                 new Customer { BirthDate = new DateTime(1981, 08, 24), Name = "Marquita" },
