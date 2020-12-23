@@ -35,7 +35,21 @@ namespace CSharp_Algorithm
         }
 
         private static void ArraysDemo()
+
         {
+
+            // declaring an array of strings
+
+            string[] names1;
+            names1 = new string[4] { "Cole", "Lamar", "Amira", "Sandra" };
+
+            string[] stuff1 = new string[5];
+
+            string[] names2 = new string[5] { "Ronnie", "Bobby", "Ricky", "Mike", "Ralph" };
+
+
+            string[] names = { "Sean", "Matt", "Johnny", "Andi" };
+
             // declaring an array of integers
             int[] array1;
             array1 = new int[10];
